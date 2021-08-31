@@ -81,7 +81,14 @@ for row in sheet_data.rows:
 # функции
 def generate_uvedomleniya():
     sheet_pattern = wb_pattern.active
-
+    cell_ =
+    cell_ =
+    cell_ =
+    cell_ =
+    cell_ =
+    cell_ =
+    cell_ =
+    cell_ =
 
 
 if __name__ == "__main__":
