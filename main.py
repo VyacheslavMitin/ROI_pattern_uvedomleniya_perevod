@@ -7,7 +7,7 @@ import openpyxl
 path_to_xls = '+EXPORTS/'
 wb_pattern = openpyxl.load_workbook('pattern.xlsx')
 wb_data = openpyxl.load_workbook('data.xlsx')
-sheet_data = wb_data.active
+
 # кортежи
 B_sotrudniki_FIO_datelniyu = []
 D_sotrudniki_doljnost_datelniyu = []
@@ -19,6 +19,8 @@ J_stavka_ciframi = []
 K_stavka_propisyui = []
 
 # Циклы чтения столбцов
+sheet_data = wb_data.active  # активация эксельки с листом
+
 for row in sheet_data.rows:
     string = ''
     column_b = sheet_data['B']
@@ -74,4 +76,14 @@ for row in sheet_data.rows:
     for cell in column_k:
         string = str(cell.value)
         K_stavka_propisyui.append(string)
+
+
+# функции
+def generate_uvedomleniya():
+    sheet_pattern = wb_pattern.active
+
+
+
+if __name__ == "__main__":
+    generate_uvedomleniya()  # запуск функции
 
