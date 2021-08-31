@@ -39,3 +39,11 @@ for row in sheet_data.rows:
     for cell in column_e:
         string = str(cell.value)
         E_sotrudniki_doljnost_imintelniyu.append(string)
+
+for row in sheet_data.rows:
+    string = ''
+    column_f = sheet_data['F']
+    for cell in column_f:
+        string = str(cell.value)
+        F_podrazdelenie_roditelnom.append(string)
+
