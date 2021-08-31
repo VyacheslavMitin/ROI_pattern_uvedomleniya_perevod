@@ -4,4 +4,8 @@
 
 import openpyxl
 
-path_to_xls
+path_to_xls = '+EXPORTS/'
+
+wb_pattern = openpyxl.load_workbook('pattern.xlsx')
+wb_data = openpyxl.load_workbook('data.xlsx')
+
