@@ -17,4 +17,11 @@ G_trud_dog_nomer = []
 H_trud_dog_data = []
 J_stavka_ciframi = []
 K_stavka_propisyui = []
-sheet_sotrudniki = wb_sotrudniki.active
+sheet_data = wb_data.active
+
+for row in sheet_data.rows:
+    string = ''
+    column_a = sheet_data['B']
+    for cell in column_a:
+        string = str(cell.value)
+        B_sotrudniki_FIO_datelniyu.append(string)
