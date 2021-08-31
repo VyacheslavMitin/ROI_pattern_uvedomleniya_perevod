@@ -30,7 +30,7 @@ for row in sheet_data.rows:
 
 for row in sheet_data.rows:
     string = ''
-    column_a = sheet_data['B']
+    column_a = sheet_data['D']
     for cell in column_a:
         string = str(cell.value)
-        B_sotrudniki_FIO_datelniyu.append(string)
+        D_sotrudniki_doljnost_datelniyu.append(string)
