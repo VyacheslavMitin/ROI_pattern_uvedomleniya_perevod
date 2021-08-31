@@ -1,5 +1,5 @@
 #  Скрипт генерации уведомлений
-# pip install pyautogui - для автоматизации печати
+# pip install pyautogui - для автоматизации печати, не будем использовать
 # pip install openpyxl - для работы с эксельками
 
 import openpyxl
@@ -18,6 +18,15 @@ H_trud_dog_data = []
 J_stavka_ciframi = []
 K_stavka_propisyui = []
 sheet_data = wb_data.active
+
+
+# Циклы чтения столбцов
+for row in sheet_data.rows:
+    string = ''
+    column_a = sheet_data['B']
+    for cell in column_a:
+        string = str(cell.value)
+        B_sotrudniki_FIO_datelniyu.append(string)
 
 for row in sheet_data.rows:
     string = ''
