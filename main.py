@@ -89,10 +89,20 @@ def generate_uvedomleniya():
     cell_doljnost_iminitelnyui = sheet_pattern['A19']  # должность в именительном
     cell_stavka_ciframi = sheet_pattern['F22']  # ставка суммой
     cell_stavka_propisyui = sheet_pattern['B23']  # ставка суммой
-
-    wb_pattern.save(f'{path_to_xls}/{FIO} №{nomer_} от {data}.xlsx')
-    if B_sotrudniki_FIO_datelniyu == 'Ятманову Владимиру Степановичу':  # последний в списке брейкает цикл
-        break
+    for FIO, nomer, data, FIO_socr, dengi in zip(B_sotrudniki_FIO_datelniyu, D_sotrudniki_doljnost_datelniyu,
+                                E_sotrudniki_doljnost_imintelniyu, F_podrazdelenie_roditelnom, G_trud_dog_nomer,
+                                H_trud_dog_data, J_stavka_ciframi, K_stavka_propisyui):
+        cell_doljnost_datelnyui.value = FIO
+        cell_podrazdeleniyu.value = nomer
+        cell_fio_datelnom.value = data
+        cell_truddog_nomer.value = FIO_socr
+        cell_truddog_data.value = dengi
+        cell_doljnost_iminitelnyui.value = data
+        cell_stavka_ciframi.value = FIO_socr
+        cell_stavka_propisyui.value = dengi
+        wb_pattern.save(f'{path_to_xls}/{FIO}.xlsx')
+        if B_sotrudniki_FIO_datelniyu == 'Ятманову Владимиру Степановичу':  # последний в списке брейкает цикл
+            break
 
 
 if __name__ == "__main__":
