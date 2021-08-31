@@ -4,7 +4,7 @@
 
 import openpyxl
 # переменные
-path_to_xls = '+EXPORTS/'
+path_to_xls = '+EXPORTS'
 wb_pattern = openpyxl.load_workbook('pattern.xlsx')
 wb_data = openpyxl.load_workbook('data.xlsx')
 
@@ -81,14 +81,18 @@ for row in sheet_data.rows:
 # функции
 def generate_uvedomleniya():
     sheet_pattern = wb_pattern.active
-    cell_ =
-    cell_ =
-    cell_ =
-    cell_ =
-    cell_ =
-    cell_ =
-    cell_ =
-    cell_ =
+    cell_doljnost_datelnyui = sheet_pattern['H5']  # должность в дательном
+    cell_podrazdeleniyu = sheet_pattern['H6']  # подразделение в родительном
+    cell_fio_datelnom = sheet_pattern['H7']  # фио в дательном
+    cell_truddog_nomer = sheet_pattern['F16']  # номер труд договора
+    cell_truddog_data = sheet_pattern['A17']  # дата труд договора
+    cell_doljnost_iminitelnyui = sheet_pattern['A19']  # должность в именительном
+    cell_stavka_ciframi = sheet_pattern['F22']  # ставка суммой
+    cell_stavka_propisyui = sheet_pattern['B23']  # ставка суммой
+
+    wb_pattern.save(f'{path_to_xls}/{FIO} №{nomer_} от {data}.xlsx')
+    if B_sotrudniki_FIO_datelniyu == 'Ятманову Владимиру Степановичу':  # последний в списке брейкает цикл
+        break
 
 
 if __name__ == "__main__":
