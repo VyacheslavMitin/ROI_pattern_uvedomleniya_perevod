@@ -47,3 +47,31 @@ for row in sheet_data.rows:
         string = str(cell.value)
         F_podrazdelenie_roditelnom.append(string)
 
+for row in sheet_data.rows:
+    string = ''
+    column_g = sheet_data['G']
+    for cell in column_g:
+        string = str(cell.value)
+        G_trud_dog_nomer.append(string)
+
+for row in sheet_data.rows:
+    string = ''
+    column_h = sheet_data['H']
+    for cell in column_h:
+        string = str(cell.value)
+        H_trud_dog_data.append(string)
+
+for row in sheet_data.rows:
+    string = ''
+    column_j = sheet_data['J']
+    for cell in column_j:
+        string = str(cell.value)
+        J_stavka_ciframi.append(string)
+
+for row in sheet_data.rows:
+    string = ''
+    column_k = sheet_data['K']
+    for cell in column_k:
+        string = str(cell.value)
+        K_stavka_propisyui.append(string)
+
